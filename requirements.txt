@@ -10,8 +10,9 @@ ipympl
 pycocotools
 segmentation-models-pytorch==0.2.1
 albumentations
-notebook
+notebook>=6.0
 k3d
+jupyter_contrib_nbextensions
 timm
 ipykernel
 open3d
