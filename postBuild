@@ -1,10 +1,15 @@
-
-
 #!/bin/bash
-set -eux  # fail fast and show commands
+set -eux  # Enable detailed output and fail on error
 
-echo "Testing if k3d is installed..."
-python -c "import k3d; print('k3d is available')"
+echo "Running postBuild script"
 
-jupyter nbextension install --py --user k3d
-jupyter nbextension enable --py --user k3d
+# Check if k3d is installed
+python -c "import k3d; print('k3d is installed')"
+
+# Install and enable k3d extension
+echo "Installing k3d extension"
+jupyter nbextension install --py --sys-prefix k3d
+echo "Enabling k3d extension"
+jupyter nbextension enable --py --sys-prefix k3d
+
+echo "postBuild script completed successfully"
