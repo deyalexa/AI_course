@@ -10,6 +10,7 @@ ipympl
 pycocotools
 segmentation-models-pytorch==0.2.1
 albumentations
+notebook
 k3d
 timm
 ipykernel
